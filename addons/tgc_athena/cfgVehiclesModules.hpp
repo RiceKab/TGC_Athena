@@ -34,13 +34,13 @@ class Module_F : Logic
   };
 };
 
-class TGC_Module_Base : Module_F
+class TGC_ModuleBase : Module_F
 {
   // Standard object definitions
-  scope = 2; // Editor visibility; 2 will show it in the menu, 1 will hide it.
+  scope = 1; // Editor visibility; 2 will show it in the menu, 1 will hide it.
   scopeCurator = 0; // Not Zeus visible
 
-  displayName = "TGC_MODULE_BASE_DISPLAYNAME"; // Name displayed in the menu
+  displayName = "TGC_ModuleBase_DISPLAYNAME"; // Name displayed in the menu
   category = "TGC_misc";		 // Defined in CfgFactionClasses
 
   // Name of function triggered once conditions are met
@@ -67,8 +67,9 @@ class TGC_Module_Base : Module_F
 };
 
 /* TEST */
-class TGC_Module_Test : TGC_Module_Base
+class TGC_ModuleTest : TGC_ModuleBase
 {
+  scope = 2;
   displayName = "Test Module";
   function = "TGC_Editor_fnc_Test";
 
@@ -77,7 +78,8 @@ class TGC_Module_Test : TGC_Module_Base
     // class Units : Units {}; // Clear Units argument
     class BooleanParam
     {
-      description = "Boolean parameter"; // Tooltip description
+      displayName = "Boolean parameter"
+      description = "Pass a boolean parameter"; // Tooltip description
       typeName = "BOOL"; // Value type, can be "NUMBER", "STRING" or "BOOL"
       class values
       {
@@ -87,14 +89,16 @@ class TGC_Module_Test : TGC_Module_Base
     };
     class NumberParam
     {
-      description = "Boolean parameter"; // Tooltip description
+      displayName = "Number parameter"; // Tooltip description
+      description = "Pass a number parameter"; // Tooltip description
       typeName = "NUMBER"; // Value type, can be "NUMBER", "STRING" or "BOOL"
       defaultValue = 0;
-      // class values { ... };  --> wihtout = inputbox?
+      // class values { ... };  --> wihtout = inputbox
     };
     class StringParam
     {
-      description = "Boolean parameter"; // Tooltip description
+      displayName = "String parameter"; // Tooltip description
+      description = "Pass a string parameter"; // Tooltip description
       typeName = "STRING"; // Default type I think
       class values
       {
@@ -118,7 +122,14 @@ class TGC_Module_Test : TGC_Module_Base
     };
     class DefaultTypeParam
     {
-      description = "Default Type parameter";
+      displayName = "Default parameter"
+      description = "Pass a parameter of default type"; // Tooltip description
+      defaultValue = "";
+    };
+    class DefaultTypeParamTwo
+    {
+      displayName = "Default parameter 2"
+      description = "Pass a parameter of default type"; // Tooltip description
       defaultValue = "";
     };
   };
@@ -127,7 +138,7 @@ class TGC_Module_Test : TGC_Module_Base
   {
     description = "Test Module Description"; // Short description, will be formatted as structured text
     sync[] = {"AnyPerson"}; // Array of synced entities (can contain base classes)
-
+    /*
     class LocationArea_F
     {
       description[] = { // Multi-line descriptions are supported
@@ -147,17 +158,19 @@ class TGC_Module_Test : TGC_Module_Base
       icon = "iconMan"; // Custom icon (can be file path or CfgVehicleIcons entry)
       side = 1; // Custom side (will determine icon color)
     };
+    */
   };
 };  // /TGC_Module_Test
 
 /* EQUPMENT */
-class TGC_Module_Equipment_Base : TGC_Module_Base
+class TGC_ModuleEquipmentBase : TGC_ModuleBase
 {
   category = "TGC_equipment";
 };
 
-class TGC_Module_Equipment_ACE_Items : TGC_Module_Equipment_Base
+class TGC_ModuleEquipmentACEItems : TGC_ModuleEquipmentBase
 {
+  scope = 2;
   displayName = "Common ACE Items";
   function = "TGC_Editor_fnc_ACE_Items";
 

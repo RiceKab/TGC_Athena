@@ -5,9 +5,9 @@ class CfgPatches
 		weapons[] = {};
 		requiredVersion = 0.1;
 		author[] = { "RiceKab" };
-		version = 1;
-		versionStr = "b0.1";
-		versionAr[] = {0,1,0};
+		version = "b0.3";
+		versionStr = "b0.3";
+		versionAr[] = {0,3,0};
 
 		#include "cfgPatchesUnits.hpp"
 
@@ -22,4 +22,6 @@ class CfgPatches
 			"Ares"
 		};
 	};
+
+	// TODO: Does TGC_Editor have to go separate?
 };

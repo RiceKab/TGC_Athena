@@ -1,6 +1,9 @@
 /**
 * Custom Equipment boxes, etc...
 */
+
+// REFERENCE CLASSES
+/*
 class rhsusf_ammo_crate : Box_NATO_Ammo_F {
 	dlc = "TGC_Athena";
 	displayName = "Empty crate with init event handler";
@@ -297,3 +300,4 @@ class rhsusf_mags_crate : Box_NATO_Wps_F {
 	};
 	class TransportItems {
 	};
+*/

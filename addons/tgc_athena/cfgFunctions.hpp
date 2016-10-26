@@ -29,14 +29,14 @@ class CfgFunctions
 
 			class Test;
 		};
-
+/*
 		class behaviour
 		{
 			file = "\tgc_athena\modules\behaviour";
 
 			//class AAAFire;
 		};
-
+*/
 		class equipment
 		{
 			file = "\tgc_athena\modules\equipment";
