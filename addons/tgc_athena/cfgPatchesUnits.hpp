@@ -1,14 +1,10 @@
 // Define editor modules here (Otherwise they're not visible)
 units[] =
 {
+  "TGC_Module_Test",
+  "TGC_Module_Equipment_ACE_Items"
   /* (Editor modules go here)
+
   "TGC_Module_Behaviour_AAAFire_Area"
-  "Ares_Module_Add_All_Objects_To_Curator",
-  "Ares_Module_Arsenal_AddCustom",
-  "Ares_Module_Arsenal_Copy_To_Clipboard",
-  "Ares_Module_Arsenal_Create_Aaf",
-  "Ares_Module_Arsenal_Create_Csat",
-  "Ares_Module_Arsenal_Create_Guerilla",
-  ...
   */
 };
