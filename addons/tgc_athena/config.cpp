@@ -1,5 +1,11 @@
 #include "cfgPatches.hpp"
 #include "cfgFactionClasses.hpp"
-#include "cfgVehicles.hpp"
+#include "cfgEditorCategories.hpp"
+
+class CfgVehicles
+{
+	#include "cfgVehiclesModules.hpp"
+	#include "cfgVehiclesEquipment.hpp"
+};
+
 #include "cfgFunctions.hpp"
-#include "cfgGroups.hpp"

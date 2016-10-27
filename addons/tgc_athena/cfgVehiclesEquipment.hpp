@@ -1,6 +1,56 @@
+class Box_NATO_Wps_F;
+class Box_NATO_WpsSpecial_F;
+class Box_NATO_Ammo_F;
+class Box_NATO_AmmoOrd_F;
+class Box_NATO_Grenades_F;
+class Box_NATO_Support_F;
+class Box_NATO_WpsLaunch_F;
+class Box_NATO_AmmoVeh_F;
+
 /**
 * Custom Equipment boxes, etc...
 */
+class TGC_Loadout_US_Grenadier : Box_NATO_Wps_F
+{
+  dlc = "TGC_Athena";
+  scope = 2;
+  displayName = "Grenadier Box";
+  editorCategory = "TGC_Loadouts";
+  editorSubcategory = "TGC_Loadouts_US";
+  transportMaxWeapons = 10;
+	transportMaxMagazines = 200;
+	class TransportWeapons {
+	};
+	class TransportMagazines {
+			class _xx_rhsusf_mag_7x45acp_MHP {   // Not sure what the _xx_ is for
+					count = 20;
+					magazine = "rhsusf_mag_7x45acp_MHP";
+			};
+	};
+	class TransportItems {
+	};
+};
+
+class TGC_Loadout_US_Pilot : Box_NATO_Wps_F
+{
+  dlc = "TGC_Athena";
+  scope = 2;
+  displayName = "Pilot Box";
+  editorCategory = "TGC_Loadouts";
+  editorSubcategory = "TGC_Loadouts_US";
+  transportMaxWeapons = 10;
+	transportMaxMagazines = 200;
+	class TransportWeapons {
+	};
+	class TransportMagazines {
+			class _xx_rhsusf_mag_7x45acp_MHP {   // Not sure what the _xx_ is for
+					count = 20;
+					magazine = "rhsusf_mag_7x45acp_MHP";
+			};
+	};
+	class TransportItems {
+	};
+};
 
 // REFERENCE CLASSES
 /*
