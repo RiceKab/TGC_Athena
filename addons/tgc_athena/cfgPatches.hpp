@@ -2,14 +2,16 @@ class CfgPatches
 {
 	class TGC_Athena
 	{
-		weapons[] = {};
-		requiredVersion = 0.1;
-		author[] = { "RiceKab" };
+		name = "TGC Athena";
+		author = "RiceKab";
 		version = "b0.3";
 		versionStr = "b0.3";
 		versionAr[] = {0,3,0};
+		requiredVersion = 0.1;
 
 		#include "cfgPatchesUnits.hpp"
+
+		weapons[] = {};
 
 		requiredAddons[] =
 		{
