@@ -10,28 +10,7 @@ class Module_F : Logic
     class Units;
   };
 
-  class ModuleDescription
-  {
-    // Used to determine sync objects
-    class Anything;
-    class AnyPerson;
-    class AnyVehicle;
-    class AnyStaticObject;
-    class AnyBrain;
-    class AnyAI;
-    class AnyPlayer;
-    class EmptyDetector;
-    /*
-			Anything - Any object - persons, vehicles, static objects, etc.
-			AnyPerson - Any person. Not vehicles or static objects.
-			AnyVehicle - Any vehicle. No persons or static objects.
-			AnyStaticObject - Any static object. Not persons or vehicles.
-			AnyBrain - Any AI or player. Not empty objects
-			AnyAI - Any AI unit. Not players or empty objects
-			AnyPlayer - Any player. Not AI units or empty objects
-			EmptyDetector - Any trigger
-		*/
-  };
+  class ModuleDescription;
 };
 
 class TGC_ModuleBase : Module_F
