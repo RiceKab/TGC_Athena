@@ -12,4 +12,9 @@ class CfgEditorSubCategories
   {
     displayName = "US";
   };
+
+  class TGC_Loadouts_Russian
+  {
+    displayName = "Russian";
+  };
 };
