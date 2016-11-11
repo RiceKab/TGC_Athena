@@ -2,7 +2,8 @@
 units[] =
 {
   "TGC_ModuleTest",
-  "TGC_ModuleEquipmentACEItems"
+  "TGC_ModuleEquipmentACEItems",
+  "TGC_ModuleEffectsSnowstorm"
   /* (Editor modules go here)
 
   "TGC_Module_Behaviour_AAAFire_Area"

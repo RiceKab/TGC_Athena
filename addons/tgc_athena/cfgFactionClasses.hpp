@@ -11,4 +11,9 @@ class CfgFactionClasses
   {
   	displayName = "TGC Equipment";
   };
+
+  class TGC_effects : NO_CATEGORY
+  {
+  	displayName = "TGC Effects";
+  };
 };

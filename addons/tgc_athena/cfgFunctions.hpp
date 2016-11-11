@@ -19,6 +19,13 @@ class CfgFunctions
 
 			class AAAFireContinuous;
 		}
+
+		class effects
+		{
+			file = "\tgc_athena\functions\effects";
+
+			class Snowstorm;
+		};
 	};
 
 	class TGC_Editor
@@ -42,6 +49,13 @@ class CfgFunctions
 			file = "\tgc_athena\modules\equipment";
 
 			class ACE_Items;
+		};
+
+		class effects
+		{
+			file = "\tgc_athena\modules\effects";
+
+			class setSnowstorm;
 		};
 	};
 };
