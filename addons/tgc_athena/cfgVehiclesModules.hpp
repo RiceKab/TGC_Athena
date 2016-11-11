@@ -46,6 +46,7 @@ class TGC_ModuleBase : Module_F
 };
 
 /* TEST */
+/*
 class TGC_ModuleTest : TGC_ModuleBase
 {
   scope = 2;
@@ -118,6 +119,7 @@ class TGC_ModuleTest : TGC_ModuleBase
     description = "Test Module Description"; // Short description, will be formatted as structured text
   };
 };  // /TGC_Module_Test
+*/
 
 /* EQUPMENT */
 class TGC_ModuleEquipmentBase : TGC_ModuleBase
@@ -284,7 +286,7 @@ class TGC_ModuleEquipmentACEItems : TGC_ModuleEquipmentBase
 
     class MortarGear
     {
-      displayName = "Marksman gear";  // Argument label
+      displayName = "Mortar gear";  // Argument label
       description = "Add/Remove Map Tools and 82mm Range Card"; // Tooltip description
       typeName = "NUMBER"; // Value type, can be "NUMBER", "STRING" or "BOOL"
       class values
