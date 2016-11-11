@@ -12,7 +12,7 @@ if (_activated) then
 
 	_enable = _logic getVariable "Status";
 
-	[_enable] call TGC_Snowstorm;
+	[_enable] call TGC_fnc_Snowstorm;
 };
 
 true

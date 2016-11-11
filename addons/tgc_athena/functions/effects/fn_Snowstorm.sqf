@@ -3,23 +3,16 @@ Original by Goon/Gooncorp 2015
 
 Appropriated and modified for modules.
 
+TGC_fnc_Snowstorm.sqf
+
 Description:
 	Enable or disable a custom snowstorm effect for all players
 
 Parameters:
-	1 aaUnit - Vehicle - AAA unit (mobile or static)
-
-Returns:
-	true (Best practice) - Only after(!) it ends. It will run the loop until unit death.
+	1 delay (Optional) - Number: Particle delay
 
 Examples:
-	Shortest: [aaa1] spawn TGC_fnc_AAAFireContinuous;
-
-	[aaa1, [[3000, 5000], [3000, 5000], [400, 1200]], 30, 5, 10, false] spawn TGC_fnc_AAAFireContinuous;
-
-	In this example the guns will fire at a position with X & Y between 3000-5000 and Z between 400-1200.
-	There will be 30s between targets, 8 salvos fired and 10 shots per salvo.
-	He will engage live targets in between salvos.
+	[] spawn TGC_fnc_Snowstorm;
 */
 
 // HELPER
