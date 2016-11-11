@@ -281,6 +281,19 @@ class TGC_ModuleEquipmentACEItems : TGC_ModuleEquipmentBase
         class Enabled {name = "Add (If not already owned)";	value = 1;};
       };
     };
+
+    class MortarGear
+    {
+      displayName = "Marksman gear";  // Argument label
+      description = "Add/Remove Map Tools and 82mm Range Card"; // Tooltip description
+      typeName = "NUMBER"; // Value type, can be "NUMBER", "STRING" or "BOOL"
+      class values
+      {
+        class Disabled {name = "Remove"; value = -1;};
+        class Nothing {name = "Default (Do nothing)"; value = 0; default = 1;};
+        class Enabled {name = "Add (If not already owned)";	value = 1;};
+      };
+    };
   };
 
   // Module description. Must inherit from base class, otherwise pre-defined entities won't be available

@@ -129,6 +129,7 @@ if (_activated) then
   _dagr = _logic getVariable "DAGR";
   _microDagr = _logic getVariable "MicroDAGR";
   _marksmanGear = _logic getVariable "MarksmanGear";
+	_mortarGear = _logic getVariable "MortarGear";
 
 	// NVG needs a seperate check
 	[_nvg, _allUnits, _nvgType] call TGC_ACE_Items_Helper_ProcessNVG;
@@ -141,6 +142,9 @@ if (_activated) then
 	[_marksmanGear, _allUnits, "ACE_ATragMX"] call TGC_ACE_Items_Helper_ProcessItems;
 	[_marksmanGear, _allUnits, "ACE_Kestrel4500"] call TGC_ACE_Items_Helper_ProcessItems;
 	[_marksmanGear, _allUnits, "ACE_RangeCard"] call TGC_ACE_Items_Helper_ProcessItems;
+	// Mortar gear
+	[_mortarGear, _allUnits, "ACE_MapTools"] call TGC_ACE_Items_Helper_ProcessItems;
+	[_mortarGear, _allUnits, "ACE_RangeTable_82mm"] call TGC_ACE_Items_Helper_ProcessItems;
 };
 
 true
