@@ -110,6 +110,7 @@ params [
 // EXECUTE
 if (_activated) then
 {
+	sleep 2;	// Wait for other scripts to spawn stuff that may have to be removed.
 	// Filter out vehicles from the passed units
 	_allUnits = [];
 	{
