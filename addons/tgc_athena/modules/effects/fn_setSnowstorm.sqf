@@ -7,12 +7,7 @@ params [
 // EXECUTE
 if (_activated) then
 {
-	sleep 2;	// Wait for other scripts
-	_allUnits = [];
-
-	_enable = _logic getVariable "Status";
-
-	[_enable] call TGC_fnc_Snowstorm;
+  [true] call TGC_fnc_Snowstorm;
 };
 
 true

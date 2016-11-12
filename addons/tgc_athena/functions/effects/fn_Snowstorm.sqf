@@ -21,18 +21,18 @@ Examples:
 */
 if (isNil "TGC_StartSnowstorm") then
 {
-	TGC_SetSnowstorm =
+	TGC_StartSnowstorm =
 	{
-		params [
-      ["_delay", 30]
-    ];
+		params [["_delay", 30]];
 
+		if(player getVariable ["_tgc_snowstorm_active", false]) exitWith {};
     // Mostly sourced code
     _alpha = .55 + random 0.12;// set the alpha of the particles
-    [_alpha] spawn {
-
-      while {TGC_Snowstorm_Active} do {
-    		_obj = (vehicle player);
+    [_alpha, _delay] spawn {
+			params ["_alpha", "_delay"];
+		  player setVariable ["_tgc_snowstorm_active", true];
+			while {TGC_Snowstorm_Active} do {
+				_obj = (vehicle player);
     		_pos = getposASL _obj;
     		setwind [0.401112*2,0.204166*2,false];
     		_n =  abs(wind select 0) + abs(wind select 1) + abs(wind select 2);
@@ -78,21 +78,26 @@ if (isNil "TGC_StartSnowstorm") then
     		deletevehicle _clouds1;
     		deletevehicle _clouds2;
     	};
+			player setVariable ["_tgc_snowstorm_active", false];
     };
     // End sourced code
 	};
 	publicVariable "TGC_StartSnowstorm";
 };
 
+diag_log "Snowstorm -- Called";
+
 params["_enable"];
 
 if (_enable) then
 {
+	diag_log "Snowstorm -- Activating";
   TGC_Snowstorm_Active = true;
-  [[], "TGC_StartSnowstorm", true, false] call BIS_fnc_MP;
+	publicVariable "TGC_Snowstorm_Active";
+  // [[], "TGC_StartSnowstorm", true, false] call BIS_fnc_MP;
+	[] remoteExec ["TGC_StartSnowstorm", 0, true];
 } else
 {
   TGC_Snowstorm_Active = false;
+	publicVariable "TGC_Snowstorm_Active";
 };
-
-publicVariable "TGC_Snowstorm_Active";

@@ -314,23 +314,8 @@ class TGC_ModuleEffectsBase : TGC_ModuleBase
 class TGC_ModuleEffectsSnowstorm : TGC_ModuleEffectsBase
 {
   scope = 2;
-  displayName = "Add/Remove Snowstorm";
+  displayName = "Set Snowstorm";
   function = "TGC_Editor_fnc_setSnowStorm";
-
-  class Arguments : ArgumentsBaseUnits
-  {
-    class Status
-    {
-      displayName = "Set"
-      description = "Enable/Disable snowstorm"; // Tooltip description
-      typeName = "BOOL"; // Value type, can be "NUMBER", "STRING" or "BOOL"
-      class values
-      {
-        class Enabled	  {name = "Enabled";	value = true; default = 1;}; // Listbox item
-        class Disabled  {name = "Disabled"; value = false;};
-      };
-    };
-  };
 
   class ModuleDescription : ModuleDescription
   {
