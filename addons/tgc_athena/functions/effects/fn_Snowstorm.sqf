@@ -9,10 +9,11 @@ Description:
 	Enable or disable a custom snowstorm effect for all players
 
 Parameters:
-	1 delay (Optional) - Number: Particle delay
+	1 enable - Boolean: Activate or deactivate snowstorm
+	2 delay (Optional) - Number: Particle delay (TODO)
 
 Examples:
-	[] spawn TGC_fnc_Snowstorm;
+	[true] spawn TGC_fnc_Snowstorm;
 */
 
 // HELPER
