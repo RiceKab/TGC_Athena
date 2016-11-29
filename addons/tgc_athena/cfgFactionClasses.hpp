@@ -16,4 +16,9 @@ class CfgFactionClasses
   {
   	displayName = "TGC Effects";
   };
+
+  class TGC_system : NO_CATEGORY
+  {
+    displayName = "TGC System";
+  };
 };

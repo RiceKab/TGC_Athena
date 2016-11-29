@@ -26,6 +26,13 @@ class CfgFunctions
 
 			class Snowstorm;
 		};
+
+		class effects
+		{
+			file = "\tgc_athena\functions\system";
+
+			class RespawnTracker;
+		};
 	};
 
 	class TGC_Editor
@@ -56,6 +63,13 @@ class CfgFunctions
 			file = "\tgc_athena\modules\effects";
 
 			class setSnowstorm;
+		};
+
+		class system
+		{
+			file = "\tgc_athena\modules\system";
+
+			class Resp_Tracker;
 		};
 	};
 };

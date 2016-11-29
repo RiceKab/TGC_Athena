@@ -322,3 +322,56 @@ class TGC_ModuleEffectsSnowstorm : TGC_ModuleEffectsBase
     description = "Snowstorm module"; // Short description, will be formatted as structured text
   };
 };  // /TGC_ModuleEffectsBase
+
+/* EFFECTS */
+class TGC_ModuleSystemBase : TGC_ModuleBase
+{
+  category = "TGC_system";
+};
+
+class TGC_ModuleSystemRespawnTracker : TGC_ModuleSystemBase
+{
+  scope = 2;
+  displayName = "Delayed Respawn Tracker";
+  function = "TGC_Editor_fnc_Resp_Tracker";
+
+  class Arguments : ArgumentsBaseUnits
+  {
+    class Target
+    {
+      displayName = "Track Target";  // Argument label
+      description = "Variable name of target to track"; // Tooltip description
+      typeName = "STRING"; // Value type, can be "NUMBER", "STRING" or "BOOL"
+      defaultValue = "Fareeha";
+    };
+
+    class Delay
+    {
+      displayName = "Position Delay";  // Argument label
+      description = "Position Delay (in seconds)"; // Tooltip description
+      typeName = "NUMBER"; // Value type, can be "NUMBER", "STRING" or "BOOL"
+      defaultValue = 180;
+    };
+
+    class Interval
+    {
+      displayName = "Time Error Margin";
+      description = "How accurate the time tracking has to be. Eg. If the margin is 5, it will hold a record of the target every 5 seconds."
+      typeName = "NUMBER";
+      defaultValue = 30;
+    };
+
+    class RespawnMarker
+    {
+      displayName = "Respawn marker name";
+      description = "Use existing or creates a new marker with the given name"
+      typeName = "STRING";
+      defaultValue = "respawn_west_tracker";
+    };
+  };
+
+  class ModuleDescription : ModuleDescription
+  {
+    description = "Tracking Respawn module"; // Short description, will be formatted as structured text
+  };
+};  // /TGC_ModuleEffectsBase
