@@ -27,7 +27,7 @@ class CfgFunctions
 			class Snowstorm;
 		};
 
-		class effects
+		class system
 		{
 			file = "\tgc_athena\functions\system";
 
