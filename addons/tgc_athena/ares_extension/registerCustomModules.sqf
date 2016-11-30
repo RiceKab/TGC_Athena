@@ -1,7 +1,8 @@
 _scriptFiles = [
 		// "Test_Hint",
 		"Behaviour_DisableAI",
-		"Behaviour_AAAFire"
+		"Behaviour_AAAFire",
+		"Effect_SnowStorm"
 		/* Add modules here */
 ];
 

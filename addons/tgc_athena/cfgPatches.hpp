@@ -4,10 +4,10 @@ class CfgPatches
 	{
 		name = "TGC Athena";
 		author = "RiceKab";
-		version = "b0.3";
-		versionStr = "b0.3";
-		versionAr[] = {0,3,0};
-		requiredVersion = 0.1;
+		version = "v5";
+		versionStr = "v5";
+		versionAr[] = {0,5,0};
+		requiredVersion = 1.64;
 
 		#include "cfgPatchesUnits.hpp"
 
@@ -24,6 +24,4 @@ class CfgPatches
 			"Ares"
 		};
 	};
-
-	// TODO: Does TGC_Editor have to go separate?
 };
