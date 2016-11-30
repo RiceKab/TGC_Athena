@@ -96,8 +96,19 @@ TGC_cb_RESP_TRACKER_ONRESPAWN = {
 };
 publicVariable "TGC_cb_RESP_TRACKER_ONRESPAWN";
 
-// TODO: Move this to initPlayerServer.sqf for jip?
+// Attach to all playable units (Currently connected + ai)
 {
 	_x addMPEventHandler ["MPKilled", TGC_cb_RESP_TRACKER_ONKILLED];
 	_x addMPEventHandler ["MPRespawn", TGC_cb_RESP_TRACKER_ONRESPAWN];
 } forEach playableUnits;
+/*
+// JIP Handler
+TGC_cb_RESP_TRACKER_JIP_CONNECTED = {
+  params ["_pid", "_steamid", "_name", "_isJIP", "_ownerid"];
+  if (_isJIP) then {
+
+  };
+};
+
+addMissionEventHandler ["PlayerConnected", TGC_cb_RESP_TRACKER_JIP_CONNECTED];
+*/

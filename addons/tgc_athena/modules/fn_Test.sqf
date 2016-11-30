@@ -22,8 +22,8 @@ if (_activated) then
   _defaultParamTwo = _logic getVariable ["DefaultTypeParamTwo", -1];
 
   // Write to log
+  diag_log "Module function called. (Code: TEST123)";
   diag_log format ["%1: %2", "Test - Units passed", _units];
-
   diag_log format ["%1: %2", "Test - Boolean Parameter", _booleanParam];
   diag_log format ["%1: %2", "Test - Number Parameter", _numberParam];
   diag_log format ["%1: %2", "Test - String Parameter", _stringParam];

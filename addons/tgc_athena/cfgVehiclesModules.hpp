@@ -46,7 +46,7 @@ class TGC_ModuleBase : Module_F
 };
 
 /* TEST */
-/*
+
 class TGC_ModuleTest : TGC_ModuleBase
 {
   scope = 2;
@@ -119,7 +119,7 @@ class TGC_ModuleTest : TGC_ModuleBase
     description = "Test Module Description"; // Short description, will be formatted as structured text
   };
 };  // /TGC_Module_Test
-*/
+
 
 /* EQUPMENT */
 class TGC_ModuleEquipmentBase : TGC_ModuleBase
@@ -321,7 +321,7 @@ class TGC_ModuleEffectsSnowstorm : TGC_ModuleEffectsBase
   {
     description = "Snowstorm module"; // Short description, will be formatted as structured text
   };
-};  // /TGC_ModuleEffectsBase
+};  // /TGC_ModuleEffectsSnowstorm
 
 /* EFFECTS */
 class TGC_ModuleSystemBase : TGC_ModuleBase
@@ -374,4 +374,4 @@ class TGC_ModuleSystemRespawnTracker : TGC_ModuleSystemBase
   {
     description = "Tracking Respawn module"; // Short description, will be formatted as structured text
   };
-};  // /TGC_ModuleEffectsBase
+};  // /TGC_ModuleSystemRespawnTracker

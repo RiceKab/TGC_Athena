@@ -16,7 +16,8 @@ if (_activated) then
 		};
 	} forEach _units;
   */
-  _target = _logic getVariable "Target";
+  if(count _units != 1) exitWith {diag_log "Resp_Tracker [ERR] -- Unit count was not 1!"};
+  _target = _units select 0;
 	_timeDelayInS = _logic getVariable "Delay";
 	_errorMarginInS = _logic getVariable "Interval";
   _respawnMarker = _logic getVariable "RespawnMarker";
